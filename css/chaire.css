@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:400,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+
+/* GERAIS */
+
+.content {
+    width: 90%;
+    max-width: 1169px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    background: #333;
+    z-index: 6;
+}
+
+header .content .logo {
+    float: left;
+    width: 200px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .content .logo h1 {
+    color: white;
+}
+
+header .content nav {
+    float: right;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .content nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 969px;
+    height: 90px;
+}
+
+header .content nav ul .nav-item {
+    padding: 0 10px;
+    width: auto;
+}
+
+header .content nav ul .nav-item a {
+    display: inline-block;
+    line-height: 90px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+header .content nav ul .nav-item a.hot-sale {
+    color: red;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+}
+
+header .content nav ul .nav-item:hover {
+    position: relative;
+    bottom: 0;
+    border-bottom: 3px solid red;
+}
+
+header .content nav ul .nav-item:hover a {
+    margin-bottom: -3px;
+}
+
+header .content .busca {
+    width: auto;
+    height: 90px;
+    padding: 0 10px;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-right: 1px solid rgba(255, 255, 255, .3);
+    display: flex;
+}
+
+header .content .busca span:hover,
+header .content .busca form button:hover,
+header .content .busca:hover {
+    cursor: pointer;
+}
+
+header .content .busca span {
+    line-height: 90px;
+    font-size: .7em;
+    font-style: italic;
+    color: rgba(255, 255, 255, .3);
+    margin-right: 10px;
+}
+
+header .content .busca form {
+    line-height: 90px;
+}
+
+header .content .busca input {
+    display: none;
+}
+
+header .content .busca form button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1.2em;
+}
+
+header .content .atendimento li {
+    padding: 0 10px;
+    line-height: 90px;
+    cursor: pointer;
+}
+
+header .content .atendimento li i {
+    font-size: 1.5em;
+    color: white;
+}
+
+header .content .cart {
+    padding: 0 10px;
+    width: 57px;
+    height: 90px;
+    background: red;
+    cursor: pointer;
+    text-align: center;
+}
+
+header .content .cart i {
+    font-size: 1.5em;
+    color: white;
+    display: block;
+    line-height: 90px;
+    z-index: 2;
+}
+
+header .content .cart i:after {
+    content: '3';
+    position: relative;
+    top: -70px;
+    right: -26px;
+    width: 25px;
+    height: 25px;
+    display: block;
+    border-radius: 50%;
+    background: #333;
+    line-height: 25px;
+    text-align: center;
+    font-size: .6em;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    z-index: 1;
+}
+
+
+/* ------ FULL BANNER ------- */
+
+section.full-banner {
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+    top: 90px;
+    background: url('../img/banner-full.jpg') no-repeat;
+    background-size: cover;
+}
+
+
+/* ------ BANNER RÉGUA ------- */
+
+div.banner-regua {
+    width: 1169px;
+    height: auto;
+    background: white;
+    position: absolute;
+    bottom: -100px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.banner-box {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+.banner-box-content i {
+    font-size: 2.3em;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.banner-box-content span.title {
+    font-weight: 600;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.banner-box-content span.description {
+    font-size: .7em;
+}
+
+.banner-box-content span.italic {
+    font-style: italic;
+    font-size: .7em;
+}
+
+
+/* ------ FULL BANNER ------- */
+
+
+/* ------ FULL BANNER ------- */
+
+
+/* ------ FULL BANNER ------- */

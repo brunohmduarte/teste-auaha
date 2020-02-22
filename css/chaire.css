@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,400i,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:400,500&display=swap');
 * {
     margin: 0;
@@ -187,6 +187,7 @@ section.full-banner {
     min-height: 600px;
     position: relative;
     top: 90px;
+    /* margin-bottom: 160px; */
     background: url('../img/banner-full.jpg') no-repeat;
     background-size: cover;
 }
@@ -199,18 +200,24 @@ div.banner-regua {
     height: auto;
     background: white;
     position: absolute;
-    bottom: -100px;
+    bottom: -90px;
     display: flex;
     justify-content: space-around;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    padding: 30px 0;
 }
 
 .banner-box {
     width: 250px;
-    height: 200px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-right: 1px solid rgba(51, 51, 51, .2);
+}
+
+.banner-box:last-child {
+    border-right: none;
 }
 
 .banner-box-content {
@@ -244,10 +251,90 @@ div.banner-regua {
 }
 
 
-/* ------ FULL BANNER ------- */
+/* ------ MINI BANNER ------- */
+
+section.mini-banner {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin-top: 200px;
+}
+
+section.mini-banner .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.mini-banner .content a img {
+    max-width: 365px;
+    max-height: 425px;
+    height: 290px;
+}
 
 
-/* ------ FULL BANNER ------- */
+/* ------ VITRINE ------- */
+
+section.vitrine {
+    width: 100%;
+    padding: 20px 0;
+}
+
+section.vitrine .content {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(51, 51, 51, .1);
+}
+
+section.vitrine .content h3 {
+    display: block;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #868585;
+    margin-bottom: 50px;
+}
+
+.conteudo-vitrine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-vitrine figure {
+    max-width: 277px;
+    height: auto;
+}
+
+.conteudo-vitrine figure img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.conteudo-vitrine figure figcaption {
+    padding: 10px;
+}
+
+.conteudo-vitrine figure figcaption span {
+    display: block;
+    font-size: .8em;
+}
+
+.conteudo-vitrine figure figcaption s {
+    font-size: .75em;
+    color: #9c9999;
+}
+
+.conteudo-vitrine figure figcaption span.a-vista {
+    font-size: initial;
+    font-weight: 600;
+}
+
+.conteudo-vitrine figure figcaption span.parcelado {
+    font-size: .8em;
+}
 
 
 /* ------ FULL BANNER ------- */

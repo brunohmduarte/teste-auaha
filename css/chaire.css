@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,400i,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:400,500&display=swap');
+@font-face {
+    font-family: 'Alien League';
+    src: url('../fonts/alien_league/alienleaguebold.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +13,8 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
-    color: #333;
+    font-weight: 200;
+    color: #272727;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -16,6 +22,11 @@ body {
 
 ul li {
     list-style: none;
+}
+
+img,
+input {
+    width: 100%;
 }
 
 
@@ -31,7 +42,7 @@ header {
     width: 100%;
     height: 90px;
     position: fixed;
-    background: #333;
+    background: #272727;
     z-index: 6;
 }
 
@@ -42,10 +53,12 @@ header .content .logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url('../img/logomarca.png') no-repeat center center;
 }
 
 header .content .logo h1 {
     color: white;
+    display: none;
 }
 
 header .content nav {
@@ -67,6 +80,7 @@ header .content nav ul {
 header .content nav ul .nav-item {
     padding: 0 10px;
     width: auto;
+    height: 90px;
 }
 
 header .content nav ul .nav-item a {
@@ -75,26 +89,125 @@ header .content nav ul .nav-item a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: .8em;
+    font-size: .7em;
+    font-weight: 600;
 }
 
 header .content nav ul .nav-item a.hot-sale {
-    color: red;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 500;
+    color: #ff5959;
+    font-family: 'Alien League', sans-serif;
+    font-weight: bold;
 }
 
 header .content nav ul .nav-item:hover {
     position: relative;
     bottom: 0;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #ff5959;
 }
 
 header .content nav ul .nav-item:hover a {
-    margin-bottom: -3px;
+    margin-bottom: 0;
 }
 
+nav ul li.dropdown ul {
+    display: flex;
+    position: absolute;
+    top: 90px;
+    min-width: 120px;
+    width: 360px;
+    height: 300px;
+    background: white;
+}
+
+nav ul li.dropdown ul li {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+nav ul li.dropdown ul li a {
+    color: initial !important;
+    font-weight: 700;
+    line-height: 40px !important;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+nav ul li.dropdown ul li a:hover {
+    color: #ff5959 !important;
+}
+
+
+/* nav ul li.dropdown:hover ul {
+    display: block;
+} */
+
 header .content .busca {
+    width: 80px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgba(255, 255, 255, .2);
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    color: white;
+}
+
+header .content .busca span.active {
+    display: inline;
+    font-size: .6em;
+    font-style: italic;
+    margin-right: 8px;
+}
+
+header .content .busca i.active {
+    display: inline;
+    font-size: 1.4em;
+}
+
+.busca span,
+.busca i {
+    display: none;
+}
+
+.busca form {
+    display: none;
+}
+
+.busca form.active {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 224px;
+    width: 630px !important;
+    height: 90px;
+    background: white;
+    z-index: 1000 !important;
+}
+
+.busca form.active input {
+    border: none;
+    padding-left: 20px;
+    font-size: 1.3em;
+}
+
+.busca form.active button.active {
+    border: none;
+    background: white;
+    font-size: 1.5em;
+    width: 60px;
+    cursor: pointer;
+}
+
+.busca form.active button i {
+    display: block;
+}
+
+
+/* header .content .busca {
     width: auto;
     height: 90px;
     padding: 0 10px;
@@ -117,6 +230,11 @@ header .content .busca span {
     margin-right: 10px;
 }
 
+header .content .busca i {
+    color: white;
+    line-height: 90px;
+}
+
 header .content .busca form {
     line-height: 90px;
 }
@@ -126,11 +244,12 @@ header .content .busca input {
 }
 
 header .content .busca form button {
-    border: none;
+    display: none;
+    /* border: none;
     background: transparent;
     color: white;
-    font-size: 1.2em;
-}
+    font-size: 1.2em; 
+} */
 
 header .content .atendimento li {
     padding: 0 10px;
@@ -147,7 +266,7 @@ header .content .cart {
     padding: 0 10px;
     width: 57px;
     height: 90px;
-    background: red;
+    background: #ff5959;
     cursor: pointer;
     text-align: center;
 }
@@ -187,9 +306,9 @@ section.full-banner {
     min-height: 600px;
     position: relative;
     top: 90px;
-    /* margin-bottom: 160px; */
-    background: url('../img/banner-full.jpg') no-repeat;
+    background: url('../img/banner-full.png') no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -230,7 +349,7 @@ div.banner-regua {
 
 .banner-box-content i {
     font-size: 2.3em;
-    color: red;
+    color: #ff5959;
     margin-bottom: 20px;
 }
 
@@ -337,4 +456,217 @@ section.vitrine .content h3 {
 }
 
 
-/* ------ FULL BANNER ------- */
+/* ------ NEWSLATTER ------- */
+
+section.newslatter {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+section.newslatter .content {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(51, 51, 51, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.newslatter .content .box-um,
+section.newslatter .content .box-tres {
+    width: 266px;
+    padding: 0 10px;
+}
+
+section.newslatter .content .box-dois {
+    width: 467px;
+    padding: 0 10px;
+    font-size: .9em;
+}
+
+section.newslatter .content .box-um {
+    font-family: 'Alien League';
+    font-size: 2em;
+    text-align: right;
+    text-transform: uppercase;
+    line-height: 35px;
+    letter-spacing: -1px;
+}
+
+section.newslatter .content .box-um span {
+    display: block;
+    font-size: 1.5em;
+}
+
+section.newslatter .content .box-tres {
+    padding: 0;
+}
+
+section.newslatter .content .box-tres form {
+    width: 100%;
+    display: flex;
+}
+
+section.newslatter .content .box-tres form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #333;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    outline: none;
+}
+
+section.newslatter .content .box-tres form button {
+    font-size: 1.3em;
+    padding: 10px;
+    border: none;
+    background: #333;
+    color: white;
+    position: relative;
+    right: 0;
+}
+
+section.newslatter .content .box-quatro {
+    text-align: center;
+    font-size: .9em;
+    width: 200px;
+    padding: 0 10px;
+}
+
+section.newslatter .content .box-quatro i {
+    font-size: 1.3em;
+    margin-left: 5px;
+}
+
+
+/* ------ RODAPÉ ------- */
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.footer-info,
+.footer-copyright {
+    width: 100%;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(51, 51, 51, .1);
+    padding-bottom: 10px;
+}
+
+.footer-info .info-institucional,
+.footer-info .info-duvidas,
+.footer-info .info-atendimento {
+    width: 175px;
+    text-align: left;
+}
+
+.footer-info .info-institucional h5,
+.footer-info .info-duvidas h5,
+.footer-info .info-atendimento h5,
+.footer-info .info-pagamento h5 {
+    font-size: .9em;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-info .info-pagamento {
+    width: 350px;
+    text-align: left;
+}
+
+.footer-info .info-fanpage {
+    width: 292px;
+    text-align: center;
+}
+
+.footer-info .info-institucional ul,
+.footer-info .info-duvidas ul,
+.footer-info .info-atendimento ul,
+.footer-info .info-pagamento ul {
+    width: 100%;
+}
+
+.footer-info .info-institucional ul li a,
+.footer-info .info-duvidas ul li a,
+.footer-info .info-atendimento ul li a {
+    font-size: .8em;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    transition: ease-in-out .5s;
+}
+
+.footer-info .info-institucional ul li a:hover,
+.footer-info .info-duvidas ul li a:hover,
+.footer-info .info-atendimento ul li a:hover {
+    color: #ff5959;
+}
+
+.footer-info .info-atendimento ul li {
+    font-size: .8em;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 2em;
+    outline: none;
+}
+
+.footer-info .info-atendimento ul li i {
+    font-size: 1.5em;
+}
+
+.footer-info .info-atendimento ul li:nth-child(3) {
+    text-transform: lowercase !important;
+}
+
+.footer-info .info-atendimento ul li a {
+    font-weight: bold;
+    font-size: .8em;
+}
+
+.footer-info .info-pagamento img {
+    width: 100%;
+}
+
+.footer-info .info-fanpage {
+    padding-left: 10px;
+}
+
+.footer-info .info-fanpage img {
+    width: 100%;
+}
+
+.footer-copyright {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-copyright p {
+    font-size: .7em;
+    color: #9c9999;
+    margin-bottom: 5px;
+}
+
+.footer-copyright .design-by {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-copyright .design-by span {
+    text-transform: uppercase;
+    font-size: .8em;
+    margin: 8px 5px 0 0;
+}

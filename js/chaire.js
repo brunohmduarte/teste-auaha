@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // Efeito hover do campo busca.
     $(".busca").hover(
         function() {
             $(".busca span, .busca i").removeClass("active");
@@ -10,4 +11,14 @@ $(document).ready(function() {
             $(".busca form").removeClass("active");
         }
     );
+
+    // Carrossel da vitrine.
+    $('.feeds').slick({
+        dots: true,
+        arrows: true,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+    });
 });

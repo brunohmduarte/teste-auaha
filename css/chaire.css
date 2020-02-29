@@ -85,7 +85,6 @@ header .content nav ul:after {
 
 header .content nav ul li.nav-item {
     float: left;
-    margin-top: -3px;
     border-bottom: 3px solid #272727;
     transition: ease-in-out .2s;
 }
@@ -195,9 +194,9 @@ header .content .busca i:before {
     display: flex;
     position: absolute;
     top: 0;
-    right: 224px;
+    right: 222px;
     width: 630px !important;
-    height: 90px;
+    height: 94px;
     background: white;
     z-index: 1000 !important;
 }
@@ -224,21 +223,52 @@ header .content .busca i:before {
 
 /* Atendimento */
 
-header .content .atendimento li {
+header .content .atendimento {
+    width: 70px;
     padding: 0 10px;
-    /* line-height: 90px; */
+    display: flex;
+    justify-content: space-around;
+}
+
+header .content .atendimento>li {
+    line-height: 87px;
     cursor: pointer;
     float: left;
+    border-bottom: 3px solid #272727;
 }
 
-header .content .atendimento li i {
+header .content .atendimento>li:hover {
+    border-bottom-color: #ff5959;
+}
+
+header .content .atendimento:after {
+    content: none !important;
+}
+
+header .content .atendimento>li i {
     font-size: 1.5em;
     color: white;
+    border-bottom: 3px solid #272727;
 }
 
-header .content .atendimento li i:before {
+header .content .atendimento>li i:before {
     margin: 0;
     font-weight: 700;
+}
+
+header .content .atendimento>li ul {
+    width: 105px !important;
+}
+
+header .content .atendimento>li ul>li {
+    line-height: 30px;
+}
+
+header .content .atendimento>li ul>li a {
+    font-size: .7em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 
@@ -247,7 +277,7 @@ header .content .atendimento li i:before {
 header .content .cart {
     padding: 0 10px;
     width: 57px;
-    height: 90px;
+    height: 94px;
     background: #ff5959;
     cursor: pointer;
     text-align: center;

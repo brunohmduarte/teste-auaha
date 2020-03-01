@@ -141,7 +141,7 @@ header .content nav ul ul li {
 
 header .content nav ul ul li a {
     padding: 10px !important;
-    text-align: left;
+    text-align: center;
     width: 150px !important;
     color: initial !important;
     transition: ease-in-out .2s;
@@ -339,6 +339,7 @@ div.banner-regua {
     bottom: -90px;
     display: flex;
     justify-content: space-around;
+    align-items: stretch;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     padding: 30px 0;
 }
@@ -348,7 +349,7 @@ div.banner-regua {
     height: 110px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     border-right: 1px solid rgba(51, 51, 51, .2);
 }
 
@@ -402,9 +403,8 @@ section.mini-banner .content {
 }
 
 section.mini-banner .content a img {
-    max-width: 365px;
-    max-height: 425px;
-    height: 290px;
+    width: 365px;
+    height: 265px;
 }
 
 
@@ -417,7 +417,7 @@ section.vitrine {
 
 section.vitrine .content {
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(51, 51, 51, .1);
+    border-bottom: 1px solid rgba(51, 51, 51, .2);
 }
 
 section.vitrine .content h3 {
@@ -438,8 +438,8 @@ div.feed {
     padding: 30px 20px
 }
 
-div.feed div.feed-modal {
-    display: none;
+div.feed:hover {
+    z-index: -1000;
 }
 
 div.feed img {
@@ -453,11 +453,12 @@ div.feed s {
 }
 
 div.feed span.title {
-    font-size: .9em;
+    font-size: .85em;
 }
 
 div.feed s.de {
     font-size: .8em;
+    color: #868585;
 }
 
 div.feed span.a-vista {
@@ -471,10 +472,32 @@ div.feed span.a-prazo {
 
 .slick-prev:before,
 .slick-next:before {
-    font-size: 30px;
-    font-weight: bold;
-    color: #333;
+    content: none;
 }
+
+.slick-prev,
+.slick-next {
+    color: #272727 !important;
+    margin: 0 auto;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    color: #272727;
+}
+
+[class^="flaticon-"]:before {
+    margin-left: 0;
+}
+
+
+/* .slick-prev {
+    text-align: right;
+}
+
+.slick-next {
+    text-align: left !important;
+} */
 
 
 /* ------ NEWSLATTER ------- */
@@ -487,7 +510,7 @@ section.newslatter {
 
 section.newslatter .content {
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(51, 51, 51, .1);
+    border-bottom: 1px solid rgba(51, 51, 51, .2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -577,7 +600,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    border-bottom: 1px solid rgba(51, 51, 51, .1);
+    border-bottom: 1px solid rgba(51, 51, 51, .2);
     padding-bottom: 10px;
 }
 
@@ -624,7 +647,7 @@ footer {
     text-decoration: none;
     text-transform: uppercase;
     outline: none;
-    transition: ease-in-out .5s;
+    transition: ease-in-out .2s;
 }
 
 .footer-info .info-institucional ul li a:hover,

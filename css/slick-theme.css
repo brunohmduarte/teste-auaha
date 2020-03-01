@@ -86,8 +86,7 @@
 }
 
 [dir='rtl'] .slick-prev:before {
-    /* content: '→'; */
-    content: '<i class="right-arrow"></i>';
+    content: '→';
 }
 
 .slick-next {
